@@ -20,6 +20,11 @@ type Person struct{
 	name string
 }
 
+type Android struct { 
+	Person
+	Model string 
+}
+
 // person talk method
 func (p *Person) talk() {
 	fmt.Println("My name is", p.name)
