@@ -24,6 +24,7 @@ func main() {
 
 	// pointer to the struct
 	// cPtr := &Circle{0, 0, 5}
+	// fmt.Println(circleArea(&c))
 
 	// get struct variable values
 	fmt.Println(c.x, c.y, c.r)
@@ -31,4 +32,5 @@ func main() {
 	// print area of circle
 	fmt.Println(circleArea(c))
 }
+
 
