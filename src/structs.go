@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-// struct definition
+// struct definition (custom types)
 type Circle struct { 
 	x,y,r float64
 }
