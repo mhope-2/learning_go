@@ -4,6 +4,7 @@ import (
 	"strings"
 	"os"
 	"io/ioutil"
+	"path/filepath"
 )
 
 func main() {
@@ -91,4 +92,98 @@ func main() {
 	fmt.Println("File content (from ioutil)")
 	fmt.Println(io_file_str)
 
+
+	/* CREATE FILE */
+	newFile, err := os.Create("created.txt") 
+	if err != nil {
+		// handle the error here
+		return
+	}
+
+	defer newFile.Close()
+	newFile.WriteString("This is a file created with os.Create()")
+
+
+	/* READ DIR CONTENT */
+	dir, err := os.Open(".")
+	if err != nil {
+		return
+	}
+	defer dir.Close()
+
+	fileInfos, err := dir.Readdir(-1) 
+	if err != nil {
+		return
+		}
+	
+	for _, fi := range fileInfos {
+		fmt.Println(fi.Name()) 
+	}
+
+	// Walk the dir and sub dirs
+	filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
+		fmt.Println(path)
+		return nil
+		})
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
