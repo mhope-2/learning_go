@@ -38,10 +38,11 @@ func main() {
 	// func ToUpper(s string) string
 	fmt.Println(strings.ToUpper("test"))
 
-	// convert a string to a slice of bytes (and vice versa)
+	// convert a string to a slice of bytes 
 	arr := []byte("test")
-	str := string([]byte{'t','e','s','t'})	
-
 	fmt.Println(arr)
+
+	// convert slice of bytes to string
+	str := string([]byte{'t','e','s','t'})	
 	fmt.Println(str)
 }
