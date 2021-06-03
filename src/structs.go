@@ -6,11 +6,11 @@ import (
 )
 
 // struct definition (custom types)
-type Circle struct { 
+type ACircle struct {
 	x,y,r float64
 }
 
-func circleArea(c Circle) float64 { 
+func circleArea(c ACircle) float64 {
 	return math.Pi * c.r * c.r
 }
 
@@ -20,7 +20,7 @@ func main() {
 	// var c Circle
 
 	// assign values
-	c := Circle{ x: 0, y: 0, r: 5 } 
+	c := ACircle{ x: 0, y: 0, r: 5 }
 
 	// pointer to the struct
 	// cPtr := &Circle{0, 0, 5}
